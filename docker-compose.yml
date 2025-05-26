@@ -1,1 +1,24 @@
+version: "3.8"
+services:
 
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: SQL1001.site4now.net
+    environment:
+      SA_PASSWORD: "Ketsi@ngaba94"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    restart: always
+
+  app:
+    build: .
+    container_name: spring_app
+    depends_on:
+      - sqlserver
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:sqlserver://SQL1001.site4now.net:1433;databaseName=db_ab968f_syspa
+      SPRING_DATASOURCE_USERNAME: sa
+      SPRING_DATASOURCE_PASSWORD: Ketsi@ngaba94
+    ports:
+      - "8080:8080"

@@ -20,7 +20,7 @@ public class SyspaBeApplication {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
 			    registry.addMapping("/")
-			    .allowedOrigins("http://localhost:4200")
+			    .allowedOrigins("http://localhost:4200", "https://syspafe.netlify.app")
 			    .allowedMethods("HEAD", "OPTIONS", "GET", "POST", "PUT", "PATCH", "DELETE")
 			    .allowCredentials(false).maxAge(3600);
 			}

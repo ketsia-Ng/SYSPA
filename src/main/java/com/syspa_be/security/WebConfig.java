@@ -18,11 +18,11 @@ public class WebConfig {
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.addAllowedOrigin("*"); // Spécifie ton domaine si besoin
+        config.setAllowedOrigins(List.of("http://localhost:4200", "https://syspafe.netlify.app"));// Spécifie ton domaine si besoin
         config.addAllowedHeader("*");
         config.addAllowedMethod("*");
         config.setExposedHeaders(List.of("Authorization", "Content-Type")); // Autoriser Angular à voir les erreurs
-       // config.setAllowCredentials(true);
+        config.setAllowCredentials(true);
         source.registerCorsConfiguration("/**", config);
         return new CorsFilter(source);
     }

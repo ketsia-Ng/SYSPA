@@ -243,7 +243,7 @@ String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.expo
 		List<identificationModel> collections = jdbcTemplate.query(query,BeanPropertyRowMapper.newInstance(identificationModel.class));
 		JRBeanCollectionDataSource ds=new JRBeanCollectionDataSource(collections);
 		JasperPrint reportlist=JasperFillManager.fillReport(
-				JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats//listsectionentite.jrxml")),null, ds);
+				JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats/listsectionentite.jrxml")),null, ds);
 		String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.exportReportToPdf(reportlist));
 		return ResponseEntity.ok(new reportBase64(encodedString)) ;
 		}
@@ -282,7 +282,7 @@ String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.expo
 			List<identificationModel> collections = jdbcTemplate.query(query,BeanPropertyRowMapper.newInstance(identificationModel.class));
 			JRBeanCollectionDataSource ds=new JRBeanCollectionDataSource(collections);
 			JasperPrint reportlist=JasperFillManager.fillReport(
-					JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats//perssectionentite.jrxml")),null, ds);
+					JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats/perssectionentite.jrxml")),null, ds);
 			String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.exportReportToPdf(reportlist));
 			return ResponseEntity.ok(new reportBase64(encodedString)) ;
 			}
@@ -321,7 +321,7 @@ String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.expo
 		List<identificationModel> collections = jdbcTemplate.query(query,BeanPropertyRowMapper.newInstance(identificationModel.class));
 		JRBeanCollectionDataSource ds=new JRBeanCollectionDataSource(collections);
 		JasperPrint reportlist=JasperFillManager.fillReport(
-				JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats//perssection.jrxml")),null, ds);
+				JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats/perssection.jrxml")),null, ds);
 		String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.exportReportToPdf(reportlist));
 		return ResponseEntity.ok(new reportBase64(encodedString)) ;
 		}
@@ -361,7 +361,7 @@ String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.expo
 			emparams.put("detailbarem", coldetail);
 			JRBeanCollectionDataSource ds=new JRBeanCollectionDataSource(collections);
 			JasperPrint reportlist=JasperFillManager.fillReport(
-					JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats//fichesituation.jrxml")),emparams, ds);
+					JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats/fichesituation.jrxml")),emparams, ds);
 			String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.exportReportToPdf(reportlist));
 			return ResponseEntity.ok(new reportBase64(encodedString)) ;
 			}catch(JRException e) {

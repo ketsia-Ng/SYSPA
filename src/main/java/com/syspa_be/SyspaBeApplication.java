@@ -19,10 +19,11 @@ public class SyspaBeApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-			    registry.addMapping("/")
-			    .allowedOrigins("http://localhost:4200", "https://syspafe.netlify.app")
-			    .allowedMethods("HEAD", "OPTIONS", "GET", "POST", "PUT", "PATCH", "DELETE")
-			    .allowCredentials(false).maxAge(3600);
+				registry.addMapping("/**")
+		        .allowedOrigins("*","http://localhost:4200", "https://syspafe.netlify.app")
+		        .allowedMethods("HEAD", "OPTIONS", "GET", "POST", "PUT", "PATCH", "DELETE")
+		       // .allowCredentials(true) // Si ton frontend envoie des cookies ou headers d'authentification
+		        .maxAge(3600);
 			}
 		};
 	}

@@ -211,12 +211,10 @@ return new PageImpl<identificationModel>(collections,pageable,count);
 				+ " i.nom,i.postnom,i.prenom,i.genre,i.datenaiss,i.dateengagement, i.lieunaiss";
 		List<identificationModel> collections = jdbcTemplate.query(query,BeanPropertyRowMapper.newInstance(identificationModel.class));
 		JRBeanCollectionDataSource ds=new JRBeanCollectionDataSource(collections);
-		JasperPrint reportlist=JasperFillManager.fillReport(
-				JasperCompileManager.compileReport(ResourceUtils.getFile("classpath:etats//listsection.jrxml").getAbsolutePath()),null, ds);
-		String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.exportReportToPdf(reportlist));
+		JasperPrint reportlist = JasperFillManager.fillReport(
+			    JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats/listsection.jrxml")),null,ds);
+String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.exportReportToPdf(reportlist));
 		return ResponseEntity.ok(new reportBase64(encodedString)) ;
-		}catch(FileNotFoundException e) {
-			return ResponseEntity.ok().body(e.getMessage());
 		}
 		catch(JRException e) {
 			return ResponseEntity.ok().body(e.getMessage());
@@ -245,11 +243,9 @@ return new PageImpl<identificationModel>(collections,pageable,count);
 		List<identificationModel> collections = jdbcTemplate.query(query,BeanPropertyRowMapper.newInstance(identificationModel.class));
 		JRBeanCollectionDataSource ds=new JRBeanCollectionDataSource(collections);
 		JasperPrint reportlist=JasperFillManager.fillReport(
-				JasperCompileManager.compileReport(ResourceUtils.getFile("classpath:etats//listsectionentite.jrxml").getAbsolutePath()),null, ds);
+				JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats//listsectionentite.jrxml")),null, ds);
 		String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.exportReportToPdf(reportlist));
 		return ResponseEntity.ok(new reportBase64(encodedString)) ;
-		}catch(FileNotFoundException e) {
-			return ResponseEntity.ok().body(e.getMessage());
 		}
 		catch(JRException e) {
 			return ResponseEntity.ok().body(e.getMessage());
@@ -286,11 +282,9 @@ return new PageImpl<identificationModel>(collections,pageable,count);
 			List<identificationModel> collections = jdbcTemplate.query(query,BeanPropertyRowMapper.newInstance(identificationModel.class));
 			JRBeanCollectionDataSource ds=new JRBeanCollectionDataSource(collections);
 			JasperPrint reportlist=JasperFillManager.fillReport(
-					JasperCompileManager.compileReport(ResourceUtils.getFile("classpath:etats//perssectionentite.jrxml").getAbsolutePath()),null, ds);
+					JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats//perssectionentite.jrxml")),null, ds);
 			String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.exportReportToPdf(reportlist));
 			return ResponseEntity.ok(new reportBase64(encodedString)) ;
-			}catch(FileNotFoundException e) {
-				return ResponseEntity.ok().body(e.getMessage());
 			}
 			catch(JRException e) {
 				return ResponseEntity.ok().body(e.getMessage());
@@ -327,11 +321,9 @@ return new PageImpl<identificationModel>(collections,pageable,count);
 		List<identificationModel> collections = jdbcTemplate.query(query,BeanPropertyRowMapper.newInstance(identificationModel.class));
 		JRBeanCollectionDataSource ds=new JRBeanCollectionDataSource(collections);
 		JasperPrint reportlist=JasperFillManager.fillReport(
-				JasperCompileManager.compileReport(ResourceUtils.getFile("classpath:etats//perssection.jrxml").getAbsolutePath()),null, ds);
+				JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats//perssection.jrxml")),null, ds);
 		String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.exportReportToPdf(reportlist));
 		return ResponseEntity.ok(new reportBase64(encodedString)) ;
-		}catch(FileNotFoundException e) {
-			return ResponseEntity.ok().body(e.getMessage());
 		}
 		catch(JRException e) {
 			return ResponseEntity.ok().body(e.getMessage());
@@ -369,13 +361,10 @@ return new PageImpl<identificationModel>(collections,pageable,count);
 			emparams.put("detailbarem", coldetail);
 			JRBeanCollectionDataSource ds=new JRBeanCollectionDataSource(collections);
 			JasperPrint reportlist=JasperFillManager.fillReport(
-					JasperCompileManager.compileReport(ResourceUtils.getFile("classpath:etats//fichesituation.jrxml").getAbsolutePath()),emparams, ds);
+					JasperCompileManager.compileReport(getClass().getClassLoader().getResourceAsStream("etats//fichesituation.jrxml")),emparams, ds);
 			String encodedString=Base64.getEncoder().encodeToString(JasperExportManager.exportReportToPdf(reportlist));
 			return ResponseEntity.ok(new reportBase64(encodedString)) ;
-			}catch(FileNotFoundException e) {
-				return ResponseEntity.ok().body(e.getMessage());
-			}
-			catch(JRException e) {
+			}catch(JRException e) {
 				return ResponseEntity.ok().body(e.getMessage());
 			
 		}

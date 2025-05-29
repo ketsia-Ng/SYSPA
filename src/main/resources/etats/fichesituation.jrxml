@@ -187,6 +187,9 @@
 			</line>
 			<staticText>
 				<reportElement x="289" y="111" width="91" height="22" uuid="e312eafc-f6dc-4741-b52b-69a1f4d28f9c"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Lieu de naissance :]]></text>
 			</staticText>
 			<staticText>
@@ -195,58 +198,100 @@
 			</staticText>
 			<staticText>
 				<reportElement x="20" y="87" width="49" height="22" uuid="130d2fce-cb5b-4f18-9434-fc1aec1b4e84"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Nom :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="20" y="160" width="49" height="22" uuid="740b8ee6-cb48-4cf5-8e27-55c2e6f5e8a1"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Genre :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="289" y="136" width="101" height="22" uuid="c55d7e6a-4aab-4dae-81b5-54c86f563ac7"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Date d'Engagement :]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="390" y="136" width="131" height="22" uuid="a31d1a65-dab8-4c9a-9430-d7e9de26676a"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{dateengagement}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="20" y="112" width="49" height="22" uuid="cbfbf61c-d37a-43ec-bf06-5bfd342588cc"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Postnom :]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="289" y="86" width="91" height="22" uuid="a1c21c96-0403-4c3a-aefa-d3380a1213c0"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Date de naissance :]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="380" y="86" width="141" height="22" uuid="531de3bf-4405-401c-b5f9-cf7cea48c2c4"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{datenaiss}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="69" y="87" width="183" height="22" uuid="cc071d72-2a75-44d6-8e3f-6b33a9be1e64"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="69" y="136" width="183" height="22" uuid="76c651fd-2953-457c-a7b6-6462cd043626"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{prenom}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="20" y="136" width="49" height="22" uuid="dcef53b1-4df7-45fa-bf4c-b1fc54eda052"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Prenom :]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="380" y="111" width="141" height="22" uuid="8fe032a1-6b08-4560-a010-58eddc71b1f9"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{lieunaiss}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="69" y="112" width="183" height="22" uuid="5f61de50-8620-4616-8a87-33dcb84397d0"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{postnom}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="69" y="160" width="183" height="22" uuid="1a38981c-b9c1-4f2e-ada7-3452a55ec176"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{genre}=="F" 	?  "Feminin"  : "Masculin"]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="18" y="60" width="49" height="22" uuid="e3c855cf-6d5d-417c-aa77-0f7479b907a8"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Matricule :]]></text>
 			</staticText>
 			<textField>
@@ -255,74 +300,123 @@
 			</textField>
 			<textField>
 				<reportElement x="385" y="228" width="141" height="22" uuid="04f0d5e2-b565-47e5-b934-00e91cb87cfb"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{datenaiss}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="25" y="254" width="49" height="22" uuid="c1a94843-aa0f-4fd9-b014-c7a401d596b1"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Entité]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="294" y="253" width="91" height="22" uuid="d8279efc-798c-4e15-a702-94d293be79e8"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Position]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="25" y="278" width="49" height="22" uuid="15a7dfe6-fffd-426a-ab53-9a99f31ee8a6"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Unité]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="385" y="253" width="141" height="22" uuid="30e54c44-b6fe-4f6c-b5be-2c5fe0df2418"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{lieunaiss}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="74" y="278" width="183" height="22" uuid="e473373c-3df7-4fcc-999a-82d71feda47a"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{prenom}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="74" y="254" width="183" height="22" uuid="f420f3d6-deb9-4c24-845b-82503b5264f7"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{postnom}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="25" y="302" width="49" height="22" uuid="48d8d505-1328-428f-a8e8-d111f9404f51"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Fonction]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="74" y="229" width="183" height="22" uuid="67a4caa0-2982-4f25-a719-ac2045e96eb9"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{nom}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="25" y="205" width="49" height="22" uuid="274261d1-69c3-45d7-9328-7f45e4bb1bfb"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[section]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="25" y="229" width="49" height="22" uuid="91b43c7a-b3f4-4593-9ec7-9e81669ebc4a"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Province]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="74" y="302" width="183" height="22" uuid="71aeed9e-c699-4361-bc26-145f649023d8"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{genre}=="F" 	?  "Feminin"  : "Masculin"]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="294" y="228" width="91" height="22" uuid="494eb4c7-72d8-4d73-b39d-8e7524f927b3"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Banque]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="74" y="205" width="183" height="22" uuid="f5ec2b27-172a-42a4-a7f9-a3df77535cf6"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{matricule}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="70" y="61" width="183" height="22" uuid="913921f4-4d5f-4638-b2f0-48165e3ac4ba"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{matricule}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="355" y="15" width="150" height="20" uuid="5ecdd35c-3f44-44c1-a468-6730d775184b"/>
 				<box rightPadding="5"/>
-				<textElement textAlignment="Right"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif"/>
+				</textElement>
 				<text><![CDATA[Situation]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="505" y="15" width="55" height="20" uuid="3e494b5d-82e1-43a1-83ab-916790445c8c"/>
 				<box rightPadding="5"/>
-				<textElement textAlignment="Left"/>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{validation}==0 ? "En Attente" : $F{validation}==1? "Validé" : $F{validation}==2 ?  "Rejété": "Bloqué"]]></textFieldExpression>
 			</textField>
 		</band>
